@@ -5,7 +5,7 @@ if __name__ == "__main__":
         try:
             version = None
             with open(config_file_path, "r") as f:
-                data = toml.load(f)
+                data = toml.load(f)#good
                 version = data["tool"]["poetry"]["version"]
         except Exception as e:
             raise Exception("unable to find version from pyproject.toml.\n", e)
